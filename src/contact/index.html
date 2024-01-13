@@ -219,73 +219,39 @@ body {
 
     <!-- Header End -->
     <!-- Contact Start -->
+<!-- Contact Start -->
 
-      <section class="contact" id="contact">
-        <div class="container">
-          <header id="header">
-          <div class="contact-box">
-            <div class="contact-info">
-              <h3 class="gradient-title">Get in touch</h3>
-              <p class="text">
-                I would love to hear from you, so whether you need a quote, 
-                have a question or just want to say hello, please feel free to 
-                drop me a line.
-              </p>
-              <div class="information-wrap">
-                <div class="information">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <p class="info-text">Islamabad, Pakistan</p>
-                </div>
+  <section class="contact" id="contact">
+    <div class="container">
+      <header id="header">
+        <div class="contact-box">
+          <div class="contact-info">
+            <!-- ... (unchanged) ... -->
+          </div>
 
-                <div class="information">
-                  <div class="contact-icon">
-                    <i class="fas fa-paper-plane"></i>
-                  </div>
-                  <p class="info-text">shahzalrehman0302@gmail.com</p>
-                </div>
-
-                <div class="information">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone-alt"></i>
-                  </div>
-                  <p class="info-text">+92 336-768-2418</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-form">
-              <h3 class="gradient-title">Contact me</h3>
+          <div class="contact-form">
+            <h3 class="gradient-title">Contact me</h3>
+            <form action="process_contact_form.php" method="post"> <!-- Add action and method attributes -->
               <div class="row">
-                <input
-                  type="text"
-                  class="contact-input"
-                  placeholder="First Name"
-                />
-                <input
-                  type="text"
-                  class="contact-input"
-                  placeholder="Last Name"
-                />
+                <input type="text" name="first_name" class="contact-input" placeholder="First Name" />
+                <input type="text" name="last_name" class="contact-input" placeholder="Last Name" />
               </div>
 
               <div class="row">
-                <input type="text" class="contact-input" placeholder="Phone" />
-                <input type="email" class="contact-input" placeholder="Email" />
+                <input type="text" name="phone" class="contact-input" placeholder="Phone" />
+                <input type="email" name="email" class="contact-input" placeholder="Email" />
               </div>
 
               <div class="row">
-                <textarea
-                  name="message"
-                  class="contact-input textarea"
-                  placeholder="Message"
-                ></textarea>
+                <textarea name="message" class="contact-input textarea" placeholder="Message"></textarea>
               </div>
-              <a href="#" class="btn">Send</a>
-            </div>
+              <button type="submit" class="btn" name="submit">Send</button> <!-- Change <a> to <button> and add name attribute -->
+            </form>
           </div>
         </div>
+      </header>
+    </div>
+  </section>
     <!-- Footer Start -->
 
     <footer class="footer">
